@@ -15,47 +15,38 @@
 4. 「開始時刻」で入力した日程に「タイトル」が表示されている
 - 使い方（編集する）：
 1. 当該「タイトル」をクリック
-2. 変更した後「編集する」をクリック
+2. 「編集する」をクリック
+3. 以下上に同じ
 - 使い方（削除する）：
 1. 当該「タイトル」をクリック
 2. 「削除する」をクリック
 
 ## データベース設計
 
-### articleテーブル
+### eventsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
-|url|string|null: false|
-#### Association
-
-### messagesテーブル
-|Column|Type|Options|
-|------|----|-------|
+|title|string|null: false|
+|content|text|null: false|
+|start_time|datetime|null: false|
 |user_id|integer|null: false, foreign_key: true|
-|first_answer|integer|null: false|
-|second_answer|integer|null: false|
-|third_answer|integer|null: false|
 #### Association
 belongs_to: user
+
 
 ### usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
-|email|string|null: false|
+|email|string|null: false, unique: true|
 |encrypted_password|string|null: false|
-|last_name|string|null: false|
-|first_name|string|null: false|
-|first_name_kana|string|null: false|
-|last_name_kana|string|null: false|
 #### Association
-belongs_to: user
+has_many: events
+
 
 ## 工夫した点
 - 個人的に慣れている日曜日始まりにしたこと
 - 必要最低限のデザインにすることでユーザーに余計な情報を与えず使いやすいようにしたこと
-- 前の月、次の月、本日、土曜日、日曜日の色を使い分け、パッとみただけで曜日をわかりやすくしたこと
+- 前の月、次の月、本日、土曜日、日曜日の色を使い分け、パッとみただけで曜日を把握しやすくしたこと
 - フォントを統一し視覚的に違和感の無いようにしたこと
 - 複数のユーザーが個々に利用できるように制約をかけたこと
 - 言語の日本語化や、タイムゾーンを日本にしたこと
