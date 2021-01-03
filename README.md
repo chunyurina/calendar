@@ -1,8 +1,8 @@
 # カレンダー
 ![トップページ](https://i.gyazo.com/847b6f8ca6a3d601a5397f1010ed4568.png)
 ![トップページ](https://i.gyazo.com/96c7bebb14d0b3a3164740e026f606ec.png)
-![トップページ](https://i.gyazo.com/34690fee0c2827cc0cbf81a56b4c9480.png)
-![トップページ](https://i.gyazo.com/a6b91d05841be27b447ec74fab886e4a.png
+![new画面](https://i.gyazo.com/34690fee0c2827cc0cbf81a56b4c9480.png)
+![show画面](https://i.gyazo.com/a6b91d05841be27b447ec74fab886e4a.png
 )
 
 ## アプリの概要
@@ -57,3 +57,4 @@ has_many: events
 - 祝日が表示されるようにすること
 - groupテーブルを追加し、家族でスケジュールを共有できるようにすること
 - 「Previous」「Next」を「<<」「>>」のようなアイコンにすること
+- コードのリファクタリングを行うこと
