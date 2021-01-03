@@ -1,0 +1,51 @@
+.new {
+  font-family: "ヒラギノ丸ゴ Pro";
+  text-align: center;
+  .title {
+    margin: 30px 0px;
+    .label {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .input {
+      input {
+        width: 25%;
+      }
+      
+    }
+  }
+  .time {
+    margin-bottom: 30px;
+    .label {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    
+  }
+  .content {
+    margin-bottom: 30px;
+    .label {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .input {
+      input {
+        height: 30px;
+        width: 30%;
+      }
+      
+    }
+  }
+  .submit {
+    .btn {
+      input {
+        padding: 10px 15px;
+        border: 1px solid ;
+        border-radius: 3px;
+        color: white;
+        background-color: red;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+<div class = 'wrapper'>
+  <div class = 'header'>
+    <% if user_signed_in? %>
+      <div class = 'plus'>
+        <%= link_to '＋', new_event_path, class: 'plus--btn' %>
+      </div>
+    <% else %>
+      <div class = 'login'>
+        <%= link_to 'ログイン', user_session_path, class: 'login--btn' %>
+      </div>
+      <div class = 'registration'>
+        <%= link_to '新規登録', new_user_registration_path, class: 'registration--btn' %>
+      </div>
+    <% end %>
+  </div>
+  <div class = 'body'>
+    <div class = 'calendar'>
+      <%= month_calendar  events: @events  do |date, events| %>
+        <%= date.day %>
+        <div>
+          <% events.each do |event| %>
+            <% if user_signed_in? && current_user.id == event.user_id %>
+              <div>
+                <%= link_to event.title, event %>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class = 'footer'>
+    <% if user_signed_in? %>
+      <div class = 'logout'>
+        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'logout--btn' %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+

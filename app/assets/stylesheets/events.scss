@@ -1,0 +1,120 @@
+.wrapper {
+  font-family: "Comic Sans MS", "ヒラギノ丸ゴ Pro";
+  .header {
+    height: 20px;
+    margin-bottom: 10px;
+    position: relative;
+    .plus {
+      &--btn{
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 40px;
+        color: red;
+        position: absolute;
+        right: 10px;
+      }
+    }
+    .login {
+      &--btn{
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 20px;
+        color: red;
+        position: absolute;
+        right: 100px;
+      }
+    }
+    .registration {
+      &--btn{
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 20px;
+        color: red;
+        position: absolute;
+        right: 10px;
+      }
+    }
+    
+    
+  }
+  .body {
+    .simple-calendar {
+      .calendar-heading {
+        margin: 30px 0;
+        display: flex;
+        justify-content: space-around;
+        .calendar-title {
+          font-weight: bold;
+          font-size: 30px;
+        }
+        a {
+          padding-top: 20px;
+          text-decoration: none;
+          color: blue;
+          font-style: italic;
+        }
+      }
+      
+    
+      .day {
+        
+      }
+    
+      .wday-0 {
+        background-color: pink;
+      }
+      .wday-1 {}
+      .wday-2 {}
+      .wday-3 {}
+      .wday-4 {}
+      .wday-5 {}
+      .wday-6 {
+        background-color: paleturquoise;
+      }
+      
+    
+      .today {
+        background-color: lemonchiffon;
+      }
+      .past {}
+      .future {}
+    
+      .start-date {}
+    
+      .prev-month {
+        background-color: lightgrey;
+      }
+      .next-month {
+        background-color: lightgrey;
+      }
+      .current-month {}
+    
+      .has-events {
+        a {
+          text-decoration: none;
+          color: crimson;
+          font-family: "ヒラギノ丸ゴ Pro";
+        }
+      }
+    
+      
+    }
+
+  }
+  .footer {
+    height: 50px;
+    position: relative;
+    .logout {
+      margin-top: 10px;
+      position: absolute;
+      right: 10px;
+      &--btn{
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 20px;
+        color: red;
+      }
+    }
+  }
+  
+}

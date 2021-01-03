@@ -1,0 +1,35 @@
+<div class = "show">
+
+  <p>
+    <div class ='title'>
+      <div class = 'sh-title'>タイトル</div>
+      <div class = 'db-title'>
+        <%= @event.title %>
+      </div>
+    </div>
+  </p>
+
+  <p>
+    <div class ='time'>
+      <div class = 'sh-time'>時間</div>
+      <div class = 'db-time'>
+        <%= @event.start_time.strftime("%Y-%m-%d %H:%M") %>
+      </div>
+    </div>
+  </p>
+
+  <p>
+    <div class ='content'>
+      <div class = 'sh-content'>内容</div>
+      <div class = 'db-content'>
+        <%= @event.content %>
+      </div>
+    </div>
+  </p>
+
+
+  <%= link_to '編集する', edit_event_path(@event) %> |
+  <%= link_to '削除する', event_path(@event.id), method: :delete, data: { confirm: '本当に削除しますか？' } %> |
+  <%= link_to '戻る', events_path %>
+
+</div>

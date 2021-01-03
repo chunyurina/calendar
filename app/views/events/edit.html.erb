@@ -1,0 +1,39 @@
+<div class = "edit">
+  <%= form_with(model: @event, local: true) do |form| %>
+
+  <div class="title">
+    <div class="label">
+      <%= form.label :タイトル %>
+    </div>
+    <div class="input">
+      <%= form.text_field :title %>
+    </div>
+  </div>
+
+    <div class="time">
+      <div class="label">
+        <%= form.label :開始時刻 %>
+      </div>
+      <div class="input">
+        <%= form.datetime_select :start_time %>
+      </div>
+  </div>
+
+  <div class="content">
+    <div class="label">
+      <%= form.label :内容 %>
+    </div>
+    <div class="input">
+      <%= form.text_field :content %>
+    </div>
+  </div>
+
+
+  <div class="submit">
+    <div class="btn">
+      <%= form.submit "保存する" %>
+    </div>
+  </div>
+
+  <% end %>
+</div>
